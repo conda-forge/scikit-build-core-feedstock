@@ -1,0 +1,25 @@
+From 4671c34a1a2510019030a7fd8c8bd7614b50b0e6 Mon Sep 17 00:00:00 2001
+From: Henry Schreiner <henryschreineriii@gmail.com>
+Date: Thu, 24 Nov 2022 08:10:35 -0500
+Subject: [PATCH] fix: windows non-default generators
+
+Signed-off-by: Henry Schreiner <henryschreineriii@gmail.com>
+---
+ src/scikit_build_core/builder/builder.py | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/src/scikit_build_core/builder/builder.py b/src/scikit_build_core/builder/builder.py
+index 87594dd..f3f951e 100644
+--- a/src/scikit_build_core/builder/builder.py
++++ b/src/scikit_build_core/builder/builder.py
+@@ -82,7 +82,9 @@ def configure(
+         if fp_backport and self.config.cmake.version < Version(fp_backport):
+             self.config.module_dirs.append(Path(find_python.__file__).parent.resolve())
+ 
+-        if sys.platform.startswith("win32"):
++        if sys.platform.startswith("win32") and "Visual Studio" in self.config.env.get(
++            "CMAKE_GENERATOR", "Visual Studio"
++        ):
+             # TODO: support cross-compilation
+             is_64bit = sys.maxsize > 2**32
+             if not is_64bit:
