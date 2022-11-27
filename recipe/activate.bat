@@ -1,4 +1,4 @@
-@if defined CONDA_BUILD (
+@if defined CONDA_BUILD_STATE (
     if defined CMAKE_GENERATOR (
         set "_CONDA_SET_SKBUILDCORE_CMAKE_GENERATOR=%CMAKE_GENERATOR%"
     )
