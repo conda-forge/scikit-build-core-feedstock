@@ -13,3 +13,9 @@ if errorlevel 1 exit 1
 copy %RECIPE_DIR%\scripts\deactivate.bat %DEACTIVATE_DIR%\%PROJECT_NAME%-deactivate.bat
 if errorlevel 1 exit 1
 
+copy %RECIPE_DIR%\scripts\activate.sh %ACTIVATE_DIR%\%PROJECT_NAME%-activate.sh
+if errorlevel 1 exit 1
+
+copy %RECIPE_DIR%\scripts\deactivate.sh %DEACTIVATE_DIR%\%PROJECT_NAME%-deactivate.sh
+if errorlevel 1 exit 1
+
