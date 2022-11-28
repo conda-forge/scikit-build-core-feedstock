@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 6
+  number: 7
 
 requirements:
   host:
@@ -27,6 +27,7 @@ requirements:
     - distlib >=0.3.5
     - exceptiongroup
     - importlib-resources >=1.3
+    - make
     - ninja >=1.5
     - packaging >=20.9
     - pathspec >=0.10.1
@@ -38,7 +39,6 @@ test:
   imports:
     - scikit_build_core
   commands:
-    - unset CMAKE_GENERATOR  # [unix]
     - pip check
     - pytest -vv -m "not isolated" -k "not sdist_time_hash_set_epoch and not sdist_hash and not get_requires_for_build_wheel"
   source_files:
@@ -52,7 +52,6 @@ test:
     - cattrs >=22.2
     - hatch-vcs
     - hatchling
-    - make  # remove after next release post 0.1.0
     - pip
     - pybind11
     - pytest >=7.2
