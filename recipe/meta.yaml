@@ -52,6 +52,7 @@ test:
     - cattrs >=22.2
     - hatch-vcs
     - hatchling
+    - make  # remove after next release post 0.1.0
     - pip
     - pybind11
     - pytest >=7.2
