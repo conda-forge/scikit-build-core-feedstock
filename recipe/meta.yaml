@@ -1,5 +1,5 @@
 {% set name = "scikit-build-core" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scikit_build_core-{{ version }}.tar.gz
-  sha256: 3b51c88fb99d2cca488cc262fa659ad3d403e2a038f8ad1d87e5f36ff6cc8deb
-  patches:
-    - 0.1.0-winfix.patch
+  sha256: c1c714a49eea7820389a8c7b8abb67b53f3f6b9fdbdab899acd1ce9d9210eed9
 
 build:
   noarch: python
-  number: 7
+  number: 0
 
 requirements:
   host:
@@ -40,7 +38,7 @@ test:
     - scikit_build_core
   commands:
     - pip check
-    - pytest -vv -m "not isolated" -k "not sdist_time_hash_set_epoch and not sdist_hash and not get_requires_for_build_wheel"
+    - pytest -vv -m "not isolated" -k "not sdist_time_hash_set_epoch and not sdist_hash"
   source_files:
     - tests/
     - src/
