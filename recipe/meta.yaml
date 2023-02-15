@@ -1,5 +1,5 @@
 {% set name = "scikit-build-core" %}
-{% set version = "0.1.6" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scikit_build_core-{{ version }}.tar.gz
-  sha256: 5aba721453a0abdd7839470d30a6586ebe5f58a65517dcef5784a36407d82def
+  sha256: d2a76d9447a412038dc5e25dd259b03c25278661a0c7c3da766bb971c1a9acd2
 
 build:
   noarch: python
@@ -22,7 +22,6 @@ requirements:
   run:
     - python >=3.7
     - cmake >=3.15
-    - distlib >=0.3.5
     - exceptiongroup
     - importlib-resources >=1.3
     - make
@@ -52,7 +51,7 @@ test:
     - hatchling
     - pip
     - pybind11
-    - pytest >=7.2
+    - pytest >=7.0
     - pytest-subprocess
     - rich
     - setuptools
