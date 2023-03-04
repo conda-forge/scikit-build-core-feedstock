@@ -1,11 +1,11 @@
-About scikit-build-core
-=======================
+About scikit-build-core-feedstock
+=================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scikit-build-core-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/scikit-build-core/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scikit-build-core-feedstock/blob/main/LICENSE.txt)
 
 Summary: Build backend for CMake based projects
 
