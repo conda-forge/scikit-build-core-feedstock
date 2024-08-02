@@ -143,7 +143,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@conda-forge/scikit-build](https://github.com/conda-forge/scikit-build/)
+* [@conda-forge/scikit-build](https://github.com/orgs/conda-forge/teams/scikit-build/)
 * [@henryiii](https://github.com/henryiii/)
 * [@jcfr](https://github.com/jcfr/)
 * [@thewtex](https://github.com/thewtex/)
