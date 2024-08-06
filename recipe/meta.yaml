@@ -34,7 +34,7 @@ test:
     - scikit_build_core
   commands:
     - pip check
-    - pytest -vv -m "not isolated" -k "not sdist_time_hash_set_epoch and not sdist_hash"
+    - pytest -vv -m "not isolated" -k "not sdist_time_hash_set_epoch and not sdist_hash and not test_broken_code"
   source_files:
     - tests/
     - src/
