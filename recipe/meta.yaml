@@ -1,5 +1,5 @@
 {% set name = "scikit-build-core" %}
-{% set version = "0.10.5" %}
+{% set version = "0.10.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scikit_build_core-{{ version }}.tar.gz
-  sha256: b1c3187bbf40fa0445e1c0562c87e9f5c17939a0df6b0141e5951dfebcb92d0e
+  sha256: 5397db8f09ee050d145406c11deed06538bb0b261df95f8d2d6aaf8699f0126d
 
 build:
   noarch: python
