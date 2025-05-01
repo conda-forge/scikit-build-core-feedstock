@@ -65,7 +65,8 @@ tests:
         - python ${{ python_min }}.*
     script:
       - pip check
-      - "pytest -vv -m \"not isolated\" -k \"not sdist_time_hash_set_epoch and not sdist_hash\""
+      # test_requires_command can incorrectly report failure in 0.11.2
+      - "pytest -vv -m \"not isolated\" -k \"not sdist_time_hash_set_epoch and not sdist_hash and not test_requires_command\""
 
 about:
   summary: Build backend for CMake based projects
