@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: scikit-build-core
-  version: "0.11.2"
+  version: "0.11.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/scikit_build_core-${{ version }}.tar.gz
-  sha256: 778fc71f0b8dd0736fa40a43f98603dd32e176977b00244b4e866d79d4564a2d
+  sha256: 74baf7cbc089f8621cc0646d9c5679034d5be1b014c10912dc32a4bcd1092506
 
 build:
   number: 0
