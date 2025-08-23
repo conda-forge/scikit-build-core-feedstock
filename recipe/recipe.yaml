@@ -3,6 +3,7 @@ schema_version: 1
 context:
   name: scikit-build-core
   version: "0.11.6"
+  python_min: "3.8"
 
 package:
   name: ${{ name|lower }}
@@ -13,7 +14,7 @@ source:
   sha256: 5982ccd839735be99cfd3b92a8847c6c196692f476c215da84b79d2ad12f9f1b
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
