@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: scikit-build-core
-  version: "0.11.6"
-  python_min: "3.8"
+  version: 0.12.0
+  python_min: '3.8'
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/scikit_build_core-${{ version }}.tar.gz
-  sha256: 5982ccd839735be99cfd3b92a8847c6c196692f476c215da84b79d2ad12f9f1b
+  sha256: 1314e683adc6f6b7186f154f120f85f113544c4f7c0bffcd7be3afe6377a3e26
 
 build:
-  number: 1
+  number: 0
   noarch: python
 
 requirements:
@@ -24,16 +24,12 @@ requirements:
     - pip
     - python ${{ python_min }}.*
   run:
-    - typing_extensions >=3.10.0
+    - typing_extensions >=4
     - python >=${{ python_min }}
     - exceptiongroup >=1.0
-    - importlib-metadata >=4.13
-    - importlib-resources >=1.3
-    - packaging >=21.3
+    - packaging >=23.2
     - pathspec >=0.10.1
     - tomli >=1.2.2
-    - typing-extensions >=3.10
-
 tests:
   - python:
       imports:
@@ -67,7 +63,7 @@ tests:
     script:
       - pip check
       # test_requires_command can incorrectly report failure in 0.11.2
-      - "pytest -vv -m \"not isolated\" -k \"not sdist_time_hash_set_epoch and not sdist_hash and not test_requires_command\""
+      - pytest -vv -m "not isolated" -k "not sdist_time_hash_set_epoch and not sdist_hash and not test_requires_command"
 
 about:
   summary: Build backend for CMake based projects
