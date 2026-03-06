@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: scikit-build-core
-  version: 0.12.1
+  version: 0.12.2
   python_min: '3.8'
 
 package:
@@ -11,14 +11,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/scikit_build_core-${{ version }}.tar.gz
-  sha256: bb663e71116bcd23d208ef30e5b94aa14f225f3704794d9429017ea9b461b0da
+  sha256: 562e0bbc9de1a354c87825ccf732080268d6582a0200f648e8c4a2dcb1e3736d
 
 build:
   number: 0
   noarch: python
   script:
     env:
-      HATCH_METADATA_CLASSIFIERS_NO_VERIFY: "1"
+      HATCH_METADATA_CLASSIFIERS_NO_VERIFY: '1'
 
 requirements:
   host:
@@ -29,9 +29,8 @@ requirements:
   run:
     - python >=${{ python_min }}
     - exceptiongroup >=1.0
-    - importlib-resources >=1.3
     - packaging >=23.2
-    - pathspec >=0.10.1
+    - pathspec >=0.12.0
     - tomli >=1.2.2
     - typing_extensions >=4
 tests:
