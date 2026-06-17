@@ -13,10 +13,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18086&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/scikit-build-core-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/scikit-build-core-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/scikit-build-core-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -147,4 +148,5 @@ Feedstock Maintainers
 * [@henryiii](https://github.com/henryiii/)
 * [@jcfr](https://github.com/jcfr/)
 * [@thewtex](https://github.com/thewtex/)
+* [@zklaus](https://github.com/zklaus/)
 
