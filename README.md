@@ -148,4 +148,5 @@ Feedstock Maintainers
 * [@henryiii](https://github.com/henryiii/)
 * [@jcfr](https://github.com/jcfr/)
 * [@thewtex](https://github.com/thewtex/)
+* [@zklaus](https://github.com/zklaus/)
 
