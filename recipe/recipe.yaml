@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: scikit-build-core
-  version: 0.12.2
+  version: 1.0.0
   python_min: '3.8'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/scikit_build_core-${{ version }}.tar.gz
-  sha256: 562e0bbc9de1a354c87825ccf732080268d6582a0200f648e8c4a2dcb1e3736d
+  sha256: b82a8b41dd66926b96096a61e8fc8df22214bbec437d251c0fda1bfb9d7df558
 
 build:
   number: 0
@@ -19,6 +19,10 @@ build:
   script:
     env:
       HATCH_METADATA_CLASSIFIERS_NO_VERIFY: '1'
+  python:
+    entry_points:
+      - scikit-build = scikit_build_core.__main__:main
+      - scikit-build-core = scikit_build_core.__main__:main
 
 requirements:
   host:
@@ -57,7 +61,7 @@ tests:
         - ninja
         - pip
         - pybind11
-        - pytest >=7.0
+        - pytest >=7.2,!=9.1.0
         - pytest-subprocess
         - rich
         - setuptools
@@ -66,8 +70,9 @@ tests:
         - python ${{ python_min }}.*
     script:
       - pip check
-      # test_requires_command can incorrectly report failure in 0.11.2
-      - pytest -vv -m "not isolated" -k "not sdist_time_hash_set_epoch and not sdist_hash and not test_requires_command"
+      - scikit-build --help
+      # test_uv_workspace needs the wheelhouse fixture, which builds scikit-build-core itself (requires git metadata)
+      - pytest -vv -m "not isolated" -k "not sdist_time_hash_set_epoch and not sdist_hash and not test_uv_workspace"
 
 about:
   summary: Build backend for CMake based projects
