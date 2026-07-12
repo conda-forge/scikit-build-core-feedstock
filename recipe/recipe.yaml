@@ -33,6 +33,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - exceptiongroup >=1.0
+    - importlib-resources >=1.3
     - packaging >=23.2
     - pathspec >=0.12.0
     - tomli >=1.2.2
