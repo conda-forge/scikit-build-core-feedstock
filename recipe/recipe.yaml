@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: scikit-build-core
-  version: 1.1.0
+  version: 1.1.1
   python_min: '3.9'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/scikit_build_core-${{ version }}.tar.gz
-  sha256: d421f837a0f645e51b99fc0d8b00c976917845d954d609ce6b06b11b2c94621b
+  sha256: e347a59193c878ac56a363e57506938652a6dd8c965790cb1cbc6bc7e8d5abad
 
 build:
   number: 0
@@ -35,7 +35,6 @@ requirements:
     - exceptiongroup >=1.0
     - packaging >=23.2
     - pathspec >=0.12.0
-    - tomli >=1.2.2
     - typing_extensions >=4
 tests:
   - python:
@@ -43,7 +42,7 @@ tests:
         - scikit_build_core
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
   - files:
       source:
         - tests/
