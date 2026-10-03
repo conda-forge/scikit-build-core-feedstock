@@ -35,6 +35,7 @@ requirements:
     - exceptiongroup >=1.0
     - packaging >=23.2
     - pathspec >=0.12.0
+    - tomli >=1.2.2
     - typing_extensions >=4
 tests:
   - python:
